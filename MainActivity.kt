@@ -26,6 +26,11 @@ fun main(){
         students.add(tempStudent)
         averages[name] = average
     }
+    for(student in students) {
+        var average = averages[student.name]
+        student.displayInfo()
+        println("평균점수는 ${average} 입니다")
+    }
 }
 class Student(name:String, kor:Int, math:Int, eng:Int) {
     var name:String
